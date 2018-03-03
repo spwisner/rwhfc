@@ -27,7 +27,7 @@
     "build-css": "node-sass-chokidar src/style -o src/style",
     "watch-css": "npm run build-css && node-sass-chokidar src/style -o src/style --watch --recursive",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "s3cmd sync build/* s3://robertwhazelforcongress.com",
     "start": "react-scripts start",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
