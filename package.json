@@ -26,10 +26,9 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/style -o src/style",
     "watch-css": "npm run build-css && node-sass-chokidar src/style -o src/style --watch --recursive",
-    "start-js": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "npm-run-all -p watch-css start-js",
+    "start": "react-scripts start",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
